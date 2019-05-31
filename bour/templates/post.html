@@ -1,0 +1,34 @@
+{%extends 'base.html'%}
+
+ {% block content %}
+
+ <div class="container">
+
+   <div class="row">
+     <div class="col-md-2"></div>
+     <div class="col-md-7">
+
+         <h1 class="text-center">{{post.title}}</h1>
+         <h5 class="text-center"><b> <u>Description:</u> </b></h5> {{post.description}}
+         <h5 class="text-center"> <b>Writer: </b> {{post.writer}}</h5>
+     </div>
+
+     <div class="col-md-3">
+     </div>
+   </div>
+   <div class="row">
+     <div class="col-md-4">
+
+     </div>
+     <div class="col-md-6">
+       <img src="{{post.post_image.url}}" class="img-responsive" alt="Post">
+
+     </div>
+     <div class="col-md-2">
+
+     </div>
+
+   </div>
+ </div>
+
+ {% endblock %}

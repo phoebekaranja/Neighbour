@@ -1,0 +1,22 @@
+{%extends 'base.html'%}
+{% load bootstrap3 %}
+{% load static%}
+
+{% block content %}
+{{block.super}}
+<div class="container" >
+
+    {% for item in post %}
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-11" class="text-center">
+        <h2 class="text-center"><b> {{ item.title }} </b></h2>
+        <br>
+        <h5 class="text-center"><b>Description: </b></h5> {{item.description}}
+        <br><br>
+        <h5 class="text-center"> <b>Writer: </b> {{item.writer}}</h5>
+      <button class="btn profile-create-btn center-block" ><a href="{% url 'post' item.id %}">Details</a> </button>
+    </div>
+    {% endfor%}
+
+  </div>
+</div>
+{% endblock %}

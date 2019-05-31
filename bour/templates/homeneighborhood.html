@@ -1,0 +1,22 @@
+{%extends 'base.html'%}
+{% load bootstrap3 %}
+{% load static%}
+
+{% block content %}
+{{block.super}}
+<div class="container">
+  <div class="row">
+    {% for hood in neighborhood %}
+    <div class="col-md-6 well">
+    <a href="{% url 'neighborhood' hood.id %}"><h4 class="text-center"><b>{{hood.name}}</b> </h4></a>
+    <style>
+    .well{
+       background-color:  black !important;
+    }
+
+    </style>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}
