@@ -78,9 +78,9 @@ WSGI_APPLICATION = 'neigh.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'Neigh',
+        'NAME': 'hood',
         'USER': 'pheobe',
-    'PASSWORD':'2019',
+    'PASSWORD':'2018',
     }
 }
 
