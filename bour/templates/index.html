@@ -1,0 +1,71 @@
+
+{%extends 'base.html'%}
+{% load bootstrap3 %}
+{% load static%}
+
+{% block content %}
+{{block.super}}
+<div class="container">
+  <div class="row">
+    <div class="col-md-1"></div>
+      <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5">
+        <a href="{% url 'homebusiness'%}"><img src="../static/pexels-photo-1616126.jpeg" class="small" class="responsive" style='width:100%;' alt="Image"></a>
+        <div class="centered"> <b><h1>Business </h1> </b></div>
+        <style>
+          .small{
+            height: 400px;
+            width: 400px;
+          }
+          .centered {
+             position: absolute;
+             color: white;
+             top: 50%;
+             left: 50%;
+             transform: translate(-50%, -50%);
+         }
+        </style>
+      </div>
+      <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5">
+        <a href="{% url 'homeneighborhood'%}"><img src="../static/architecture-building-city-221106.jpg" class="small" class="responsive" style='width:100%;' alt="Image"></a>
+        <div class="centered"> <b><h1>Neighbourhood </h1> </b></div>
+      </div>
+      <div class="col-md-1"></div>
+
+  </div>
+      <br>
+
+  <div class="row">
+    <div class="col-md-0.5"></div>
+    <div class="col-md-1"></div>
+    <div class="col-md-3">
+      <a href="/homepost"><img src="../static/4k-wallpaper-architecture-background-1308624.jpg" class="xm" class="responsive"style='width:100%;' alt=""></a>
+      <div class="xmd"> <b><h1> Post</h1> </b></div>
+      <style media="screen">
+        .xm{
+          height: 200px;
+          width: 200px;
+        }
+        .xmd {
+           position: absolute;
+           color: white;
+           top: 50%;
+           left: 50%;
+           transform: translate(-50%, -50%);
+       }
+      </style>
+    </div>
+    <div class="col-md-3">
+      <a href="/homehealth"><img src="../static/background-board-brown-326311.jpg" class="xm" class="img-responsive" style='width:100%;' alt=""></a>
+      <div class="xmd"> <b><h1> Health</h1> </b></div>
+    </div>
+    <div class="col-md-3">
+      <a href="/homepolice"><img src="../static/art-burn-burning-266623.jpg" class="xm" class="img-responsive" style='width:100%;' alt=""></a>
+      <div class="xmd"> <b><h1>Police  </h1> </b></div>
+    </div>
+    <div class="col-md-1"></div>
+    <div class="col-md-0.5"></div>
+
+  </div>
+  <br><br>
+</div>
+{% endblock %}
