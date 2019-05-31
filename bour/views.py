@@ -3,7 +3,7 @@ from django.http  import HttpResponse,Http404
 
 # Create your views here.
 
-@login_required(login_url='/accounts/login/')
+# @login_required(login_url='/accounts/login/')
 def index(request):
     business = Business.get_all()
     neighborhood = Neighborhood.get_all()

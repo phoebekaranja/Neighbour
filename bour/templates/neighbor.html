@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load bootstrap3 %}
+{% load static %}
+{% load staticfiles %}
+
+{% block content %}
+{{block.super}}
+  <link rel="stylesheet" href="../static/css/profile.css">
+
+<div class="container">
+  <div class="row">
+
+    <div class="col-md-3">
+    </div>
+      <div class="col-md-6 well" class="center">
+        <h5> <b> Neighbourhood Name : </b>{{neighborhood.name}}</h5>
+        <h5> <b> Neighbourhood (location) : </b>{{neighborhood.location}}</h5>
+        <h6> <b>Neighbourhood Occupants count : </b>{{neighborhood.count}}</h6>
+        <style>
+        .well{
+           background-color:  black !important;
+           color: purple;
+        }
+
+        </style>
+      </div>
+    <div class="col-md-3">
+    </div>
+
+  </div>
+</div>
+{% endblock %}
