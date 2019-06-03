@@ -1,5 +1,5 @@
 from django.test import TestCase
-from .models import Neighborhood,UserStatus, Business
+from .models import Neighborhood, Business
 
 # Create your tests here.
 
@@ -36,24 +36,6 @@ class NeighborhoodTestClass(TestCase):
         self.updated_neighborhood = Neighborhood.objects.get(id = 3)
         self.assertEqual(self.updated_neighborhood.count,2)
 
-class UserStatusTestClass(TestCase):
-    #Set up method
-    def setUp(self):
-        self.new_userstatus =UserStatus(user_image="ed.jpeg",user_email = "phoebemurish@gmail.com")
-
-    # Testing  instance
-    def test_instance(self):
-        self.assertTrue(isinstance(self.new_userstatus,UserStatus))
-
-    #Testing Save Method
-    def test_save_method(self):
-        self.new_userstatus.save_userstatus()
-        # userstatus = UserStatus.objects.all()https://github.com/phoebekaranja/neighbourhood
-        self.assertTrue(len(userstatus)>0)
-
-    def test_delete_method(self):
-        self.new_userstatus.save_userstatus()
-        self.new_userstatus.delete_userstatus()
 
 class BusinessTestClass(TestCase):
     #Set up method
