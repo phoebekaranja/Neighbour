@@ -6,9 +6,9 @@
 {{block.super}}
 <div class="container">
   <div class="row">
-    {% for hood in neighborhood %}
+    {% for bour in neigh %}
     <div class="col-md-6 well">
-    <a href="{% url 'neighborhood' hood.id %}"><h4 class="text-center"><b>{{hood.name}}</b> </h4></a>
+    <a href="{% url 'neigh' bour.id %}"><h4 class="text-center"><b>{{bour.name}}</b> </h4></a>
     <style>
     .well{
        background-color:  black !important;
